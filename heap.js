@@ -74,11 +74,16 @@ function sort(arr) {
   // 根节点与尾节点替换, 此时最大的节点在最后, 剔除掉后重新构建大堆树
   // 继续重复步骤
   // 进行尾递归, 因为每次递归, 最大的都会插入该次遍历的最后
-  for (let i = arr.length - 1; i >= 0; i--) {
-    // 交换根节点
+  // for (let i = arr.length - 1; i >= 0; i--) {
+  //   // 交换根节点
+  //   swap(arr, 0, i)
+  //   // 重新构建大堆树
+  //   reheap(arr, 0, i - 1)
+  // }
+  swap(arr, 0, arr.length - 1)
+  for (let i = arr.length - 2; i >= 0; i--) {
+    reheap(arr, 0, i)
     swap(arr, 0, i)
-    // 重新构建大堆树
-    reheap(arr, 0, i - 1)
   }
   return arr
 }

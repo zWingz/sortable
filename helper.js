@@ -4,7 +4,7 @@ module.exports.swap = function swap(arr, i, j) {
   arr[j] = temp
 }
 
-function generateTestCase(len) {
+module.exports.generateTestCase = function generateTestCase(len) {
   const ret = []
   for(let i = 0; i < len; i ++) {
     ret.push(Math.floor(Math.random() * 100 + Math.random() * 10))
