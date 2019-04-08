@@ -1,3 +1,8 @@
+/**
+ * 快排
+ * 链表
+ */
+
 const { assert, arrToLinkList, linkListToArr, swapLink } = require('./helper')
 
 function sort(arr) {

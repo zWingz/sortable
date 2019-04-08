@@ -13,10 +13,11 @@ module.exports.generateTestCase = function generateTestCase(len) {
 }
 
 module.exports.assert = fn => {
-  const testArr = exports.generateTestCase(20)
+  const testArr = exports.generateTestCase(100)
   const expect = [...testArr].sort((a, b) => (a > b ? 1 : -1))
   const receive = fn(testArr)
-  console.log(receive.join('') === expect.join(''))
+  const result = receive.join('') === expect.join('')
+  return result
 }
 
 class Link {

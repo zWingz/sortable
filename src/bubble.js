@@ -15,3 +15,5 @@ function sort(arr) {
 }
 
 assert(sort)
+
+module.exports = sort

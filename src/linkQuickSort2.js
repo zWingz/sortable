@@ -1,4 +1,9 @@
-const { assert, arrToLinkList, linkListToArr, swapLink } = require('./helper')
+/**
+ * 快排
+ * 链表
+ */
+
+const { assert, arrToLinkList, linkListToArr } = require('./helper')
 
 function sort(arr) {
   const { start, end } = arrToLinkList(arr)

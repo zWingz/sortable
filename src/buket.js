@@ -45,3 +45,5 @@ function s(arr, buket = 4) {
 }
 
 assert(s)
+
+module.exports = s

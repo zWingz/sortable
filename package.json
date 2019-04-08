@@ -1,0 +1,24 @@
+{
+  "name": "sortable",
+  "version": "1.0.0",
+  "description": "sort",
+  "main": "index.js",
+  "repository": "git@github.com:zWingz/sortable.git",
+  "author": "zWingz <zhengzwing@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "ava"
+  },
+  "devDependencies": {
+    "ava": "^1.4.1"
+  },
+  "ava": {
+    "files": [
+      "test/*.test.js"
+    ],
+    "sources": [
+      "src/*.js"
+    ]
+  }
+}

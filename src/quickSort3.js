@@ -35,3 +35,4 @@ function quickSort(arr) {
 }
 
 assert(sort)
+module.exports = sort

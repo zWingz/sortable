@@ -3,7 +3,7 @@
  */
 const { swap, assert } = require('./helper')
 
-function sort(arr) {
+function sort1(arr) {
   const len = arr.length
   for (let i = 1; i < len; i++) {
     // [0, i - 1] 是已排序序列
@@ -33,5 +33,9 @@ function sort2(arr) {
   }
   return arr
 }
-assert(sort)
+assert(sort1)
 assert(sort2)
+module.exports = {
+  sort1,
+  sort2
+}

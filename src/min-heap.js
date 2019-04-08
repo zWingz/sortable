@@ -27,7 +27,7 @@ function reheap(arr, i, end) {
   }
 }
 
-function test(arr, m) {
+function sort(arr, m) {
   const len = arr.length
   for (let i = len - 1; i >= 0; i--) {
     reheap(arr, i, len - 1)
@@ -40,6 +40,7 @@ function test(arr, m) {
   return arr
 }
 
-const caseArr = generateTestCase(20)
-const ret = test(caseArr)
-console.log(ret.join('') === caseArr.sort((a, b) => a > b ? -1 : 1).join(''))
+// const caseArr = generateTestCase(20)
+// const ret = sort(caseArr)
+// console.log(ret.join('') === caseArr.sort((a, b) => a > b ? -1 : 1).join(''))
+module.exports = sort

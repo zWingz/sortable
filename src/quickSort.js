@@ -41,3 +41,5 @@ function partition(arr, left ,right) {
 }
 
 assert(sort)
+
+module.exports = sort
