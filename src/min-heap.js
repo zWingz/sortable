@@ -2,8 +2,9 @@
  * 降序用小堆树
  */
 
-const { swap, generateTestCase } = require('./helper')
+const { swap } = require('./helper')
 function reheap(arr, i, end) {
+  /* istanbul ignore if */
   if(end < i) {
     return
   }

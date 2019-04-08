@@ -20,6 +20,7 @@ function quickSort(start, end) {
 }
 
 function partition(head, end) {
+  /* istanbul ignore if */
   if (!head || head === end) return
   let pviot = head // 比较值
   let prevIndex = pviot // 左指针
@@ -42,3 +43,5 @@ function partition(head, end) {
 sort([3, 2, 1, 5, 4, 9, 3, 10, 3, 0, 12, -1])
 
 assert(sort)
+
+module.exports = sort

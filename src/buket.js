@@ -14,10 +14,10 @@ const { assert, insert } = require('./helper')
 
 function s(arr, buket = 4) {
   const len = arr.length
-  let max = 0,
-    min = 0
+  let max = arr[0],
+    min = arr[0]
   const buk = []
-  for (let i = 0; i < len; i++) {
+  for (let i = 1; i < len; i++) {
     const val = arr[i]
     if (val > max) max = val
     if (val < min) min = val

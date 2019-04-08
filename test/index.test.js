@@ -8,6 +8,8 @@ import conterSort from '../src/counterSort'
 import quickSort1 from '../src/quickSort'
 import quickSort2 from '../src/quickSort2'
 import quickSort3 from '../src/quickSort3'
+import linkQuickSort1 from '../src/linkQuickSort'
+import linkQuickSort2 from '../src/linkQuickSort2'
 import maxHeapSort from '../src/max-heap'
 import minHeapSort from '../src/min-heap'
 import { testSort } from './helper'
@@ -40,6 +42,12 @@ test('quickSort2 sort', (t) => {
 })
 test('quickSort3 sort', (t) => {
   testSort(t, quickSort3)
+})
+test('linkQuickSort1 sort', (t) => {
+  testSort(t, linkQuickSort1)
+})
+test('linkQuickSort2 sort', (t) => {
+  testSort(t, linkQuickSort2)
 })
 test('maxHeap sort', (t) => {
   testSort(t, maxHeapSort)

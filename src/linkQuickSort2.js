@@ -62,3 +62,4 @@ function quickSort(head) {
 }
 
 assert(sort)
+module.exports = sort
