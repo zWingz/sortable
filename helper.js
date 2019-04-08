@@ -6,17 +6,15 @@ module.exports.swap = function swap(arr, i, j) {
 
 module.exports.generateTestCase = function generateTestCase(len) {
   const ret = []
-  for(let i = 0; i < len; i ++) {
+  for (let i = 0; i < len; i++) {
     ret.push(Math.floor(Math.random() * 100 + Math.random() * 10))
   }
   return ret
 }
 
-
-
 module.exports.assert = fn => {
-  const testArr = generateTestCase(20)
-  const expect = [...testArr].sort((a,b) => a > b ? 1 : -1)
+  const testArr = exports.generateTestCase(20)
+  const expect = [...testArr].sort((a, b) => (a > b ? 1 : -1))
   const receive = fn(testArr)
   console.log(receive.join('') === expect.join(''))
 }
@@ -53,7 +51,7 @@ module.exports.swapLink = function swapLink(from, to) {
 }
 
 module.exports.linkListToArr = function toArr(link) {
-  if(!link) return []
+  if (!link) return []
   let current = link
   let ret = []
   while (current) {
@@ -61,4 +59,32 @@ module.exports.linkListToArr = function toArr(link) {
     current = current.next
   }
   return ret
+}
+
+/**
+ * 插入到有序数组中
+ * 二分法
+ *
+ * @param {*} arr
+ * @param {*} val
+ */
+module.exports.insert = function insert(arr, val) {
+  function _insert(arr, val, left, right) {
+    if (left >= right) {
+      arr.splice(arr[left] > val ? left : left + 1, 0, val)
+      return
+    }
+    const mid = Math.floor((right - left) / 2) + left
+    const midVal = arr[mid]
+    if (midVal === val) {
+      arr.splice(mid + 1, 0, val)
+      return
+    }
+    if (midVal > val) {
+      _insert(arr, val, left, mid - 1)
+    } else {
+      _insert(arr, val, mid + 1, right)
+    }
+  }
+  _insert(arr, val, 0, arr.length - 1)
 }

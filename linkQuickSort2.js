@@ -49,20 +49,7 @@ function quickSort(head) {
     retEnd.next = newRight.head
     retEnd = newRight.end
   }
-  // if (newleft && newRight) {
-  //   newleft.end.next = head
-  //   head.next = newRight.head
-  //   retHead = newleft.head
-  //   retEnd = newRight.end
-  // } else if (newleft) {
-  //   newleft.end.next = head
-  //   retHead = newleft.head
-  //   retEnd = head
-  // } else if (newRight) {
-  //   retHead = head
-  //   head.next = newRight.head
-  //   retEnd = newRight.end
-  // }
+
   return {
     head: retHead,
     end: retEnd

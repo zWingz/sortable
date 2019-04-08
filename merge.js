@@ -4,6 +4,8 @@ function sort(arr) {
   return merge(arr, 0, arr.length - 1)
 }
 
+// 需要指定数组的left和right边界
+// 在原数组上进行比较
 function merge(arr, left, right) {
   if (left >= right) {
     return [arr[left]]
@@ -22,6 +24,9 @@ function merge(arr, left, right) {
   return ret.concat(leftArr).concat(rightArr)
 }
 
+// 通过slice来分割数组
+// 在slice数组中进行比较
+// 不需要left和right边界
 function merge1(arr) {
   if(arr.length <= 1) return arr
   const mid = Math.floor(arr.length / 2)
